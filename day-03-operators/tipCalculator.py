@@ -5,10 +5,11 @@ print("===== 👾 Mini Tip Calculator 🎰 =====")
 def calculate_tip():
     total_amount = float(input("What is the total of the bill 💵(R): "))
     number_of_people = int(input("How many people are Dining 👯‍♀️: "))
-    tip_percentage = float(input("What percentage would you like to give as tip: ")) * 100
+    tip_percentage = float(input("What percentage would you like to give as tip: "))
 
     #NITTY GRITTY CALCULATIONS
-    total_bill_with_tip = (total_amount * tip_percentage) + total_amount
+    tip = tip_percentage / 100
+    total_bill_with_tip = (total_amount * tip) + total_amount
     amount_each = total_bill_with_tip / number_of_people
 
     print(f"===== 🎰 Bill Summary 🎮 ========")
