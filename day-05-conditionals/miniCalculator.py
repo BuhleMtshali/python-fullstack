@@ -12,19 +12,19 @@ def calculator_app():
 
         match operator:
             case "+":
-                output == first_number + second_number
+                output = first_number + second_number
                 print(f"Output: {output}")
             case "-":
-                output == first_number - second_number
+                output = first_number - second_number
                 print(f"Output: {output}")
             case "*":
-                output == first_number * second_number
+                output = first_number * second_number
                 print(f"Output: {output}")
             case "/":
                 if second_number == 0:
                     print("🚫 Cannot divide by 0")
                 else:
-                    output == first_number / second_number
+                    output = first_number / second_number
                     print(f"Output: {output}")
             case _:
                 print("‼️ Invalid Operators")
@@ -32,9 +32,10 @@ def calculator_app():
        
 
         #CLOSING THE LOOP
-        runAgain = input("👾 Want to make another calculation? (yes/no): ")
+        runAgain = input("👾 Want to make another calculation? (yes/no): ").lower()
         if runAgain != "yes":
             print("===== ⛳️ Thank you For Trying My Mini Calculator 🎲 =====")
+            break
 
 
 #TIMER FOR DELAYED FUNCTION
