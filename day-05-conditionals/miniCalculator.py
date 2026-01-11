@@ -8,8 +8,22 @@ def calculator_app():
         first_number = float(input("🎰 Enter your first number: "))
         operator = input("🧩 Choose an operator (+, /, *, -): ")
         second_number = float(input("🥦 Enter your second number: "))
+        output = 0
 
-
+        match operator:
+            case "+":
+                return output == first_number + second_number
+            case "-":
+                return output == first_number - second_number
+            case "*":
+                return output == first_number * second_number
+            case "/":
+                if second_number == 0:
+                    print("🚫 Cannot divide by 0")
+                else:
+                    return output == first_number / second_number
+            case _:
+                print("‼️ Invalid Operators")
 
 
         #CLOSING THE LOOP
