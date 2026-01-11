@@ -32,4 +32,6 @@ def calculator_app():
             print("===== ⛳️ Thank you For Trying My Mini Calculator 🎲 =====")
 
 
-
+#TIMER FOR DELAYED FUNCTION
+timer = threading.Timer(2, calculator_app)
+timer.start()
