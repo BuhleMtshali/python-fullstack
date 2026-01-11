@@ -6,7 +6,8 @@ def calculator_app():
     #STARTING WHILE LOOP
     while True:
         first_number = float(input("🎰 Enter your first number: "))
-        operator = input("🧩 Choose an operator")
+        operator = input("🧩 Choose an operator (+, /, *, -): ")
+        second_number = float(input("🥦 Enter your second number: "))
 
 
 
