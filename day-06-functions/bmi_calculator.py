@@ -14,3 +14,6 @@ def calculate_bmi():
         print("Category: Overweight")
     else:
         print("Category: Obese")
+
+
+calculate_bmi()
