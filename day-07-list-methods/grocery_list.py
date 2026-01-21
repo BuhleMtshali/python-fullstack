@@ -5,7 +5,24 @@ print("======= 🐝 Mini Grocery Console Game 🎲 ======")
 def grocery_list():
     list = []
 
+    #STARTING THE WHILE LOOP
+    while True:
+        item = input("🧩 Enter your first item: ").lower()
+        if len(item) > 2:
+            list.append(item)
+            if len(list) > 0:
+                for item, index in list:
+                    print(f"{index}: {item}")
+            else:
+                print("‼️ List is currently empty!")
+        else:
+            print("‼️INVALID, please add an item first!")
 
+        #CLOSING THE LOOP
+        add_again = input("✨ Wanna Add Another item(yes/no): ").lower()
+        if add_again != "yes":
+            print("====== 🛁 THANK YOU FOR TRYING MY MINI CONSOLE CART 🛍️ =====")
+            break
 
 
 #TIMER FOR DELAYED FUNCTION
