@@ -3,7 +3,7 @@ import threading
 print("======= 🐝 Mini Grocery Console Game 🎲 ======")
 
 def grocery_list():
-    print("helo")
+    list = []
 
 
 
