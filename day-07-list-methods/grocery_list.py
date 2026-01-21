@@ -7,11 +7,12 @@ def grocery_list():
 
     #STARTING THE WHILE LOOP
     while True:
-        item = input("🧩 Enter your first item: ").lower()
-        if len(item) > 2:
-            list.append(item)
+        items = input("🧩 Enter your first item: ").lower()
+        if len(items) > 2:
+            list.append(items)
             if len(list) > 0:
-                for item, index in list:
+                print("🛍️ Items In Your List: ")
+                for index, item in enumerate(list):
                     print(f"{index}: {item}")
             else:
                 print("‼️ List is currently empty!")
