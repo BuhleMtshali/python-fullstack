@@ -13,7 +13,7 @@ def grocery_list():
             if len(list) > 0:
                 print("🛍️ Items In Your List: ")
                 for index, item in enumerate(list):
-                    print(f"{index}: {item}")
+                    print(f"🧩{index}: {item}")
             else:
                 print("‼️ List is currently empty!")
         else:
