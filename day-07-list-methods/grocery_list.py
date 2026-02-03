@@ -9,7 +9,14 @@ def add_item():
    item_name = input("Enter the name of the item⏲️: ")
    item_quantity = int(input("🔌 Enter the quantity you want to add: "))
    item_price = float(input("💵 How much is the item each(R): "))
-
+   total_price_item = item_quantity * item_price
+   
+   item = {
+       "name": item_name,
+       "quntity": item_quantity,
+       "price_each": item_price,
+       "total_price": total_price_item
+    }
 
 
 def grocery_list():
