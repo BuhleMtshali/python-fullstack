@@ -2,7 +2,7 @@ import threading
 
 print("======= 🐝 Mini Grocery Console Game 🎲 ======")
 
-grocery_list = []
+grocery_list = [{"name": "rice", "quantity": 30, "price each": 21, "total price": 630}, {"name": "chicken", "quantity": 30, "price each": 21, "total price": 630}]
 
 #DEF FOR ADDING TO THE LIST
 def add_item():
@@ -27,12 +27,21 @@ def add_item():
       for key, value in item.items():
          print(f"{key.capitalize()}: {value}")
          
-      
-add_item()
-
+#FUCNTION TO REMOVE ITEMS
 def remove_item():
-   print("function to remove items")
+   remove_item = input("Enter the name of the product you want to remove: ").lower()
+   for item in grocery_list:
+      if remove_item == item["name"]:
+         grocery_list.remove(item)
+         print(f"✅ {remove_item.capitalize()} has been removed from your cart!")
+         print(grocery_list)
+      else:
+         print(f"‼️ {remove_item.capitalize()} does not exist try adding it!")
 
+
+
+    
+remove_item()
 
 def grocery_list():
 
@@ -48,5 +57,5 @@ def grocery_list():
          break;
 
 #TIMER FOR DELAYED FUNCTION
-timer = threading.Timer(3, grocery_list)
-timer.start()
+#timer = threading.Timer(3, grocery_list)
+#timer.start()
