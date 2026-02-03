@@ -14,13 +14,24 @@ def add_item():
    item = {
        "name": item_name,
        "quntity": item_quantity,
-       "price_each": item_price,
-       "total_price": total_price_item
+       "price each": item_price,
+       "total price": total_price_item
     }
-   
-   grocery_list.append(item)
-   print(grocery_list)
 
+
+
+   grocery_list.append(item)
+   print("===== Items in Cart 🛒 =====")
+   for index, item in enumerate(grocery_list):
+      print(f"=== 🧺 Item {index} =====")
+      for key, value in item.items():
+         print(f"{key.capitalize()}: {value}")
+         
+      
+add_item()
+
+def remove_item():
+   print("function to remove items")
 
 
 def grocery_list():
