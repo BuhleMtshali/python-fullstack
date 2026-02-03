@@ -6,7 +6,7 @@ grocery_list = []
 
 #DEF FOR ADDING TO THE LIST
 def add_item():
-   item_name = input("Enter the name of the item⏲️: ")
+   item_name = input("Enter the name of the item⏲️: ").lower()
    item_quantity = int(input("🔌 Enter the quantity you want to add: "))
    item_price = float(input("💵 How much is the item each(R): "))
    total_price_item = item_quantity * item_price
@@ -17,6 +17,10 @@ def add_item():
        "price_each": item_price,
        "total_price": total_price_item
     }
+   
+   grocery_list.append(item)
+   print(grocery_list)
+
 
 
 def grocery_list():
