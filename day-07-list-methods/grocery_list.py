@@ -2,10 +2,23 @@ import threading
 
 print("======= 🐝 Mini Grocery Console Game 🎲 ======")
 
+grocery_list = []
+
+#DEF FOR ADDING TO THE LIST
+def add_item():
+   item_name = input("Enter the name of the item⏲️: ")
+   item_quantity = int(input("🔌 Enter the quantity you want to add: "))
+   item_price = float(input("💵 How much is the item each(R): "))
+
+
+
 def grocery_list():
+
    while True:
-      print("loop is running...")
-      
+      print("our options will mgo in here")
+
+
+
       #CLOSING THE LOOP
       runAgain = input("👾 Would you like to run another process? (yes/no): ")
       if runAgain != "yes":
