@@ -55,7 +55,16 @@ def grocery_list():
       print("4. Exit ‼️")
       choice = input("🧩 Please choose an Option: ")
 
-
+      match choice:
+         case "1":
+            view_items()
+         case "2":
+            add_item()
+         case "3":
+            remove_item()
+         case "4":
+            print("🎲 ==== Thank you For Trying My Mini Grocery List =====")
+            break
 
       #CLOSING THE LOOP
       runAgain = input("👾 Would you like to run another process? (yes/no): ")
@@ -64,5 +73,5 @@ def grocery_list():
          break;
 
 #TIMER FOR DELAYED FUNCTION
-#timer = threading.Timer(3, grocery_list)
-#timer.start()
+timer = threading.Timer(3, grocery_list)
+timer.start()
