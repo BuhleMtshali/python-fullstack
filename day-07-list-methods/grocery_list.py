@@ -46,13 +46,14 @@ def view_items():
          print("-" * 30)
 
 
-
-view_items()
-
 def grocery_list():
 
    while True:
-      print("our options will mgo in here")
+      print("1. View Grocery List 🛍️")
+      print("2. Add Item 📦")
+      print("3. Remove Item 🚫")
+      print("4. Exit ‼️")
+      choice = input("🧩 Please choose an Option: ")
 
 
 
