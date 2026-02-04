@@ -18,8 +18,6 @@ def add_item():
        "total price": total_price_item
     }
 
-
-
    grocery_list.append(item)
    print("===== Items in Cart 🛒 =====")
    for index, item in enumerate(grocery_list):
@@ -38,10 +36,18 @@ def remove_item():
       else:
          print(f"‼️ {remove_item.capitalize()} does not exist try adding it!")
 
+#FUNCTION TO VIEW THE LIST
+def view_items():
+   if len(grocery_list) > 0:
+      for index, item in enumerate(grocery_list):
+         print(f"====== 🎮 Item {index} =======")
+         for key, value in item.items():
+            print(f"{key.capitalize()}: {value}")
+         print("-" * 30)
 
 
-    
-remove_item()
+
+view_items()
 
 def grocery_list():
 
