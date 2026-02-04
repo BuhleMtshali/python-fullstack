@@ -42,7 +42,7 @@ def view_items():
       for index, item in enumerate(grocery_list):
          print(f"====== 🎮 Item {index} =======")
          for key, value in item.items():
-            print(f"{key.capitalize()}: {value}")
+            print(f"🐝 {key.capitalize()}: {value}")
          print("-" * 30)
 
 
