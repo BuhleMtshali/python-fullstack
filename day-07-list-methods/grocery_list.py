@@ -4,40 +4,52 @@ print("======= 🐝 Mini Grocery Console Game 🎲 ======")
 
 grocery_list = [{"name": "rice", "quantity": 30, "price each": 21, "total price": 630}, {"name": "chicken", "quantity": 30, "price each": 21, "total price": 630}]
 
-#DEF FOR ADDING TO THE LIST
 def add_item():
-   item_name = input("Enter the name of the item⏲️: ").lower()
-   item_quantity = int(input("🔌 Enter the quantity you want to add: "))
-   item_price = float(input("💵 How much is the item each(R): "))
-   total_price_item = item_quantity * item_price
-   
-   item = {
-       "name": item_name,
-       "quntity": item_quantity,
-       "price each": item_price,
-       "total price": total_price_item
+    item_name = input("Enter the name of the item⏲️: ").strip().lower()
+    item_quantity = int(input("🔌 Enter the quantity you want to add: "))
+    item_price = float(input("💵 How much is the item each(R): "))
+    total_price_item = item_quantity * item_price
+
+    new_item = {
+        "name": item_name,
+        "quantity": item_quantity,
+        "price each": item_price,
+        "total price": total_price_item
     }
 
-   for item in grocery_list:
-      if item["name"] not in item:
-          grocery_list.append(item)
-      print("===== Items in Cart 🛒 =====")
-      for index, item in enumerate(grocery_list):
-         print(f"=== 🧺 Item {index} =====")
-      for key, value in item.items():
-         print(f"{key.capitalize()}: {value}")
-         
+    # check if item already exists
+    for item in grocery_list:
+        if item["name"].lower() == item_name:
+            print("‼️ Item already exists in your cart.")
+            return
+
+    grocery_list.append(new_item)
+    print(f"✅ {item_name.capitalize()} added to your cart!")
+
+    # show cart after adding
+    print("\n===== Items in Cart 🛒 =====")
+    for index, item in enumerate(grocery_list, start=1):
+        print(f"\n=== 🧺 Item {index} ===")
+        for key, value in item.items():
+            print(f"{key.capitalize()}: {value}")
+      
 
 
 #FUCNTION TO REMOVE ITEMS
 def remove_item():
-   removed_item = input("Enter the name of the product you want to remove: ").lower()
-   for item in grocery_list:
-      if removed_item == item["name"]:
-         grocery_list.remove(item)
-         print(f"✅ {removed_item.capitalize()} has been removed from your cart!")
-      else:
-         print(f"‼️ {removed_item.capitalize()} does not exist try adding it!")
+    removed_item = input("Enter the name of the product you want to remove: ").strip().lower()
+    found = False
+
+    for item in grocery_list:
+        if removed_item == item["name"].lower():
+            grocery_list.remove(item)
+            print(f"✅ {removed_item.capitalize()} has been removed from your cart!")
+            found = True
+            break
+
+    if not found:
+        print(f"‼️ {removed_item.capitalize()} does not exist. Try adding it!")
+
 
 #FUNCTION TO VIEW THE LIST
 def view_items():
