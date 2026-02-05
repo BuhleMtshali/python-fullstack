@@ -48,3 +48,15 @@ def remove_number():
 
     if not found:
         print(f"🚫 {removed_name.capitalize()} does not exist")
+
+
+# FUCTION TO VIEW THE LIST
+def view_number():
+    if len(contact_book) > 0:
+        for index, item in enumerate(contact_book):
+            print(f"===== 🎮 Number. {index} =======")
+            for key, value in item.items():
+                print(f"👾 {key.capitalize()}: {value}")
+            print("-" * 30)
+        else:
+            print("✨ Unfortunately your contact book is currently empty, try adding some numbers first!")
