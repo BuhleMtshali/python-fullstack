@@ -32,4 +32,16 @@ def add_number():
         for key, value in item.items():
             print(f"{key.capitalize()}: {value}")
 
-add_number()
+
+# FUNCTION TO REMOVE NUMBER
+def remove_number():
+    removed_name = input("🐝 Enter the name of the person who's number you want to remove: ").lower()
+    found = False
+
+    #NOW LETS LOOP INSIDE OUR LIST OF DICTIOANRIES
+    for item in contact_book:
+        if removed_name == item["name"].lowe():
+            contact_book.remove(item)
+            print(f"✅ {removed_name.capitalize()} has been removed from your contact book!")
+            found = True
+            break
