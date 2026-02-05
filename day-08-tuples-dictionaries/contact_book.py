@@ -45,3 +45,6 @@ def remove_number():
             print(f"✅ {removed_name.capitalize()} has been removed from your contact book!")
             found = True
             break
+
+    if not found:
+        print(f"🚫 {removed_name.capitalize()} does not exist")
