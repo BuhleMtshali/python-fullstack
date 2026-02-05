@@ -60,3 +60,12 @@ def view_number():
             print("-" * 30)
         else:
             print("✨ Unfortunately your contact book is currently empty, try adding some numbers first!")
+
+
+#MAIN FUCNTION
+def main_function():
+    while True:
+        print("1. View contact book 🪪")
+        print("2. Add Contact 👥")
+        print("3. Remove contact 🐝")
+        print("4. Exit 🚫")
