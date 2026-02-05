@@ -4,3 +4,21 @@ print("===== 🔖 Phone Book Console Appp 🔢 =====")
 
 contact_book = []
 
+def add_number():
+    number_name = input("🙋🏻‍♀️ Enter the person's number: ").lower()
+    relationship_number = input("👥 What is your relationship with the person: ").lower()
+    person_number = int(input("📞 Enter the number: "))
+
+    #ACTUAL NUMBER
+    new_number = {
+        "name": number_name,
+        "relationship": relationship_number,
+        "number": person_number
+    }
+
+    #CHECKIGN IF THE NUMBER EXISTS
+    for number in contact_book:
+        if number["name"].lower() == number_name:
+            print("‼️ You already have this number in your contact book!")
+
+    #THIS IS NOW ADDING THE NUMBER
