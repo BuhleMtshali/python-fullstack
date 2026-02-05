@@ -32,3 +32,4 @@ def add_number():
         for key, value in item.items():
             print(f"{key.capitalize()}: {value}")
 
+add_number()
