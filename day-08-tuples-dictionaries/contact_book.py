@@ -1,6 +1,8 @@
 import threading
 
-print("===== 🔖 Phone Book Console Appp 🔢 =====")
+print("\n===== 🔖 Phone Book Console Appp 🔢 =====")
+
+print("\n===== The program will start 🔜 =====")
 
 contact_book = []
 
