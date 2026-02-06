@@ -88,3 +88,7 @@ def main_function():
         if runAgain != "yes":
             print("===== 👥 Thank you for trying my mini contact book 📋 ======")
             break
+
+#TIMER
+timer = threading.Timer(3, main_function)
+timer.start()
