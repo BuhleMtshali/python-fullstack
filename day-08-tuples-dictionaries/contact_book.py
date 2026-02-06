@@ -72,3 +72,19 @@ def main_function():
         choice = input("🔖 Choose an option to continue: ")
 
         #SWITCH STATEMENTS
+        match choice:
+            case "1":
+                view_number()
+            case "2":
+                add_number()
+            case "3":
+                remove_number()
+            case "4":
+                print("===== 👥 Thank you for trying my mini contact book 📋 ======")
+                break
+        
+        #CLOSING THE LOOP
+        runAgain = input("🧩 Would you like to run again (yes/no): ").lower()
+        if runAgain != "yes":
+            print("===== 👥 Thank you for trying my mini contact book 📋 ======")
+            break
