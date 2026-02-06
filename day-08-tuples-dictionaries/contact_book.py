@@ -42,7 +42,7 @@ def remove_number():
 
     #NOW LETS LOOP INSIDE OUR LIST OF DICTIOANRIES
     for item in contact_book:
-        if removed_name == item["name"].lowe():
+        if removed_name == item["name"].lower():
             contact_book.remove(item)
             print(f"✅ {removed_name.capitalize()} has been removed from your contact book!")
             found = True
@@ -60,8 +60,8 @@ def view_number():
             for key, value in item.items():
                 print(f"👾 {key.capitalize()}: {value}")
             print("-" * 30)
-        else:
-            print("✨ Unfortunately your contact book is currently empty, try adding some numbers first!")
+    else:
+        print("✨ Unfortunately your contact book is currently empty, try adding some numbers first!")
 
 
 #MAIN FUCNTION
