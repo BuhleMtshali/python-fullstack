@@ -7,7 +7,7 @@ print("\n===== The program will start 🔜 =====")
 contact_book = []
 
 def add_number():
-    number_name = input("🙋🏻‍♀️ Enter the person's number: ").lower()
+    number_name = input("🙋🏻‍♀️ Enter the person's name: ").lower()
     relationship_number = input("👥 What is your relationship with the person: ").lower()
     person_number = int(input("📞 Enter the number: "))
 
