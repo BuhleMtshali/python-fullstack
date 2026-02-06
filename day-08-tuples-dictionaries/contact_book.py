@@ -69,3 +69,6 @@ def main_function():
         print("2. Add Contact 👥")
         print("3. Remove contact 🐝")
         print("4. Exit 🚫")
+        choice = input("🔖 Choose an option to continue: ")
+
+        #SWITCH STATEMENTS
