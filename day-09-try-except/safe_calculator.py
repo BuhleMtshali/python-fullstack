@@ -1,2 +1,5 @@
-even_numbers = [2, 4, 6, 8]
-print(even_numbers[5])
+try:
+    print(5/0)
+    
+except ZeroDivisionError:
+    print("cannot be o")
