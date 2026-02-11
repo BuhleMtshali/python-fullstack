@@ -1,5 +1,6 @@
-try:
-    print(5/0)
-    
-except ZeroDivisionError:
-    print("cannot be o")
+print("======= 👾 Welcome to Mini Calculator Using TRY/Except ========")
+
+#OUTER LOOP keep trying until you get it right
+while True:
+    try:
+        num1 = int(input("Enter your first number: "))
