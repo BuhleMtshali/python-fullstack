@@ -1,1 +1,1 @@
-print("===== MINI GAME ====")
+print("===== 👾 Rock Paper Scissors Game ====")
