@@ -6,7 +6,9 @@ print("======== 🐝 Welcome to My Mini Movie Wishlist Project ======")
 with open('movie_list.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["SN", "Movie Name", "Year"])
-    
+
+# STARTING THE WHILE LOOP SO THE PERSON CAN KEEP ADDING A MOVIE
+
 while True:
     ranking_number = int(input("What number is this movie ranking: "))
     movie_name = input("Enter the movie name: ").lower()
