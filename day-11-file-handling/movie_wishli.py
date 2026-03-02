@@ -2,7 +2,7 @@ import csv
 
 print("======== 🐝 Welcome to My Mini Movie Wishlist Project ======")
 
-# CREATING CSV FILE
+# CREATING CSV FILE AND THE HEADER ONCE
 with open('movie_list.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["SN", "Movie Name", "Year"])
