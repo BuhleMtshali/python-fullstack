@@ -12,6 +12,13 @@ while True:
     movie_name = input("Enter the movie name: ").lower()
     movie_year = input("Enter the movie publication year: ")
     
+    writer.writerow(ranking_number, movie_name, movie_year)
+    
+    #READING THE FILE
+    with open('movie_list.csv', 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            print(row)
     
     addAgain = input("Would you like to add another movie (yes/no): ").lower()
     if addAgain == "no":
