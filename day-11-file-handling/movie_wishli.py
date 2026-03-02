@@ -21,7 +21,7 @@ while True:
         
     #READING THE FILE
     with open('movie_list.csv', 'r') as file:
-        reader = csv.writer(file)
+        reader = csv.reader(file)
         print("\n🎥 Your Movie Wishlist: ")
         for row in reader:
             print(row)
