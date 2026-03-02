@@ -1,3 +1,5 @@
 import os
 
-print(os.getcwd())
+#THIS PRINTS THE CURRENT WORKING DIRECORY
+
+print(f"Directory: {os.getcwd()}")
