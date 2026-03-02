@@ -12,11 +12,15 @@ while True:
     movie_name = input("Enter the movie name: ").lower()
     movie_year = input("Enter the movie publication year: ")
     
-    writer.writerow(ranking_number, movie_name, movie_year)
-    
+    #OPEN FILE IN APPEND MODE
+    with open('movie_list.csv', 'a', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow([ranking_number, movie_name, movie_year])
+        
     #READING THE FILE
     with open('movie_list.csv', 'r') as file:
-        reader = csv.reader(file)
+        reader = csv.writer(file)
+        print("\n🎥 Your Movie Wishlist: ")
         for row in reader:
             print(row)
     
