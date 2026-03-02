@@ -2,8 +2,12 @@ import csv
 
 print("======== 🐝 Welcome to My Mini Movie Wishlist Project ======")
 
+# CREATING CSV FILE
+with open('movie_list.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+
 while True:
-    print("loop is runnibg...")
+    
     
     
     addAgain = input("Would you like to add another movie (yes/no): ").lower()
