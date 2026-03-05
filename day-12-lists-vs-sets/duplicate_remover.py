@@ -22,7 +22,9 @@ def add_movie():
             print("🚫 Item already exists in your list!!")
             return
         
-        
+    # AFTER CHECKING APPEND IT
+    main_list.append(new_movie)    
+    print(f"✅ {item.name.capitalize()} has been added to your list!")
 
 #MAIN FUNCTION
 def check_item():
