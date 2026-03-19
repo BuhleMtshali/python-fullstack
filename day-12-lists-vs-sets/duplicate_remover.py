@@ -15,7 +15,7 @@ def add_movie():
         "publification": movie_publication,
         "duration": movie_duration
     }
-    
+
     #CHECKIING IF THE ITEM EXISTS FIRST
     for item in main_list:
         if item["name"].lower() == item.name:
