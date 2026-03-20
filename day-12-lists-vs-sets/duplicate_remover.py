@@ -28,7 +28,7 @@ def add_movie():
 
 #MAIN FUNCTION
 def check_item():
-    print("printing the main function...")
+    add_movie()
     
     
     
