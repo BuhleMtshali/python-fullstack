@@ -8,3 +8,4 @@ while True:
     calculateAgain = input("Wanna calculate again(yes/no): ").lower()
     if calculateAgain != "yes":
         print("==== THANK YOU FOR TRYING BUDGET SPLITTER ====")
+        break
