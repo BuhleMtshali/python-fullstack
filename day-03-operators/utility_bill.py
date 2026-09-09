@@ -22,6 +22,22 @@ def utility_bill_calculator():
         
         #STARTING ELECTRICITY BILL CALCULATIONS
         
+        #first calculation is for domestic
+        if(type == 1):
+            category == "Domestic"
+            
+            #CALCULATING IF THE USER USES <= 100
+            if units <= 100:
+                total_bill = units * 3.0
+            
+            # if the user uses more than 100 but less than 200
+            elif units <= 200:
+                #first 100 calculated at R3 per unit then the leftover R4
+                total_bill = (100 * 3.0) + ((units - 100) * 4.0)
+                
+            # if they use more than 200 then first 200 calculated and then the rest at R5 per unit
+            else:
+                total_bill = (100 * 3.0) + (100 * 4.0) + ((units - 200) * 5.0)
         
         #CLOSING THE LOOP
         runagain = input("\n----- 💡 Wanna calculate again? (yes/no): ").lower()
