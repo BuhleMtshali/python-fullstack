@@ -23,7 +23,7 @@ def utility_bill_calculator():
         #STARTING ELECTRICITY BILL CALCULATIONS
         
         #first calculation is for domestic
-        if(type == 1):
+        if type == 1:
             category == "Domestic"
             
             #CALCULATING IF THE USER USES <= 100
@@ -38,6 +38,23 @@ def utility_bill_calculator():
             # if they use more than 200 then first 200 calculated and then the rest at R5 per unit
             else:
                 total_bill = (100 * 3.0) + (100 * 4.0) + ((units - 200) * 5.0)
+                
+                
+        elif type == 2:
+            category == "Commercial"
+            
+            if units <= 100:
+                total_bill = units * 6.0
+                
+            elif units <= 200:
+                total_bill = (100 * 6.0) + ((units - 100) * 7.0)
+                
+            else:
+                total_bill = (100 * 5.0) + (100 * 6.0) + ((units - 200) * 8.0)
+                
+        else:
+            print("\n ------ ⛔️ INVALID CONNECTION TYPE ⛔️ -----")
+            return
         
         #CLOSING THE LOOP
         runagain = input("\n----- 💡 Wanna calculate again? (yes/no): ").lower()
