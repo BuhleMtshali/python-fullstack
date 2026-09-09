@@ -59,7 +59,7 @@ def utility_bill_calculator():
         print("n----- 🧾 Bill Summary -----")
         print(f"🏡 Connection Type: {category}")
         print(f"🧮 Units Consumed: {units}kWh")
-        print(f"======== 💡Total Amount Due 💵 : R%.2f\n, {total_bill}")
+        print(f"======== 💡Total Amount Due 💵 : R{total_bill}")
         
         #CLOSING THE LOOP
         runagain = input("\n----- 💡 Wanna calculate again? (yes/no): ").lower()
