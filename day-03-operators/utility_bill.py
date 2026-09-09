@@ -11,7 +11,9 @@ def utility_bill_calculator():
     #STARTING THE WHILE LOOP
     while True:
         
-        
+        #GETTING USER CONSUMPTION UNITS & USE CASE TYPE
+        units = float(input("💡 Enter units consumed (kWh): "))
+        type = int(input("🕹️ Enter connection type (1 for Domestic, 2 for commercial): "))
         
         #CLOSING THE LOOP
         runagain = input("\n----- 💡 Wanna calculate again? (yes/no): ").lower()
