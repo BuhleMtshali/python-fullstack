@@ -56,12 +56,18 @@ def utility_bill_calculator():
             print("\n ------ ⛔️ INVALID CONNECTION TYPE ⛔️ -----")
             return
         
+        print("n----- 🧾 Bill Summary -----")
+        print(f"🏡 Connection Type: {category}")
+        print(f"🧮 Units Consumed: {units}kWh")
+        print(f"======== 💡Total Amount Due 💵 : R%.2f\n, {total_bill}")
+        
         #CLOSING THE LOOP
         runagain = input("\n----- 💡 Wanna calculate again? (yes/no): ").lower()
         if runagain != "yes":
             print("\n --------- 🧾 THANK YOU FOR TRYING MY UTILITY BILL CALCULATOR 🧾 -----------")
             break
 
+            
 
 
 # CREATING THE TIMER FUNCTION
