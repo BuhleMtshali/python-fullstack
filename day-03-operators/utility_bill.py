@@ -4,7 +4,7 @@ import threading
 
 #WELCOME MESSAGE
 
-println("-------- 🧾 UTILITY BILL CALCULATOR 💡 ---------")
+print("-------- 🧾 UTILITY BILL CALCULATOR 💡 ---------")
 
 def utility_bill_calculator():
     
@@ -16,7 +16,8 @@ def utility_bill_calculator():
         #CLOSING THE LOOP
         runagain = input("\n----- 💡 Wanna calculate again? (yes/no): ").lower()
         if runagain != "yes":
-            println("\n --------- 🧾 THANK YOU FOR TRYING MY UTILITY BILL CALCULATOR 🧾 -----------")
+            print("\n --------- 🧾 THANK YOU FOR TRYING MY UTILITY BILL CALCULATOR 🧾 -----------")
+            break
 
 
 
