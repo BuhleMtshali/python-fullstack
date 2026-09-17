@@ -6,7 +6,17 @@ print("------ 💡 SCHOLASHIP ELIGIBILITY CHECKER 🕯️ -----")
 
 # STARTING THE FUNCTION
 def scholarship_eligibility_checker():
-    print("function is running....")
+    
+    #STARTING THE WHILE LOOP
+    while True:
+        print("loop is running...")
+        
+        
+        #CLOSING THE LOOP
+        runAgain = input("\n----- 🕹️ Wanna check again? (yes/no): ").lower()
+        if runAgain != "yes":
+            print("\n --------- 🧾 THANK YOU FOR TRYING MY SCHOLARSHIP ELIGIBILITY CHECKER 🧾 -----------")
+            break
 
 
 # CALLING THE FUNCTION
