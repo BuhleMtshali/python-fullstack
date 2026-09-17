@@ -1,7 +1,12 @@
 # IMPORTING TIMER FUNCTION
 import threading
 
+print("------ 💡 SCHOLASHIP ELIGIBILITY CHECKER 🕯️ -----")
 
+
+# STARTING THE FUNCTION
+def scholarship_eligibility_checker():
+    print("function is running....")
 
 
 # CALLING THE FUNCTION
