@@ -1,129 +1,284 @@
-## 🧮🎮 Mini Calculator App — Day 4 🚀🐝
+# **🎓🕯️ Scholarship Eligibility Checker — Day 4 🐍🚀**
 
-### 🌟 Overview
+## **🌟 Overview**
 
-Welcome to my ***Mini Calculator App 🎉***
+Welcome to my **🎓 Scholarship Eligibility Checker!**
 
-This Python program lets users perform basic math operations in a fun, interactive way — no crashes, no chaos, no dividing by zero drama 🚫➗😤.
+For Day 4 of my **100 Days of Python 🐍🔥**, I built a program that checks whether a student qualifies for a scholarship based on their:
 
-- Supported operations:
+* 👤 Age
+* 🎓 GPA
+* 💰 Annual family income
 
-    - ➕ Addition
+The program uses **conditional statements** to make decisions based on the information entered by the user.
 
-    - ➖ Subtraction
+It also runs inside a loop 🔁, allowing users to check multiple applicants without restarting the program.
 
-    - ✖️ Multiplication
+---
 
-    - ➗ Division (with safety checks 🛡️)
+## **🎯 What I Learned 🧠✨**
 
-- The app runs in a loop 🔁 so users can keep calculating until they’re emotionally done 😌.
+This project helped me understand how Python can make decisions using:
 
-## 🎯 What I Learned 🧠✨
+* 🧠 `if` statements
+* 🔀 `elif` statements
+* 🚪 `else` statements
+* 🔗 Logical operators such as `and` and `or`
+* 🔢 Comparing numbers with operators like `<`, `>`, and `>=`
+* 🔄 `while True` loops for repeated interaction
+* 🎭 `.lower()` for handling different forms of user input
+* 🧱 Functions for organizing code
+* ⌨️ `input()` for collecting information from users
+* 🔄 Type conversion using `int()` and `float()`
+* ⏱️ `threading.Timer` for delayed program execution
 
-- This project helped me level up on:
+---
 
-    - 🔁 while loops for continuous user interaction
+## **⚙️ How the Program Works 🛠️**
 
-    - 🎛️ match-case (Python’s switch statement glow-up ✨)
+### **1. ⏳ Program Startup**
 
-    - 🧮 Basic arithmetic logic
+The program displays a welcome message and uses `threading.Timer` to wait **3 seconds** before starting the eligibility checker.
 
-    - 🛡️ Defensive programming (trust NO input 😤)
-
-    - ⏱️ Delayed execution using threading.Timer
-
-    - 🧼 Writing cleaner, more readable Python code
-
-
-## ⚙️ How the App Works 🛠️
-
-1. ⏳ The app waits 2 seconds before starting (dramatic pause 😏)
-
-2. 👤 User enters:
-
-    - 🎰 First number
-
-    - 🧩 Operator (+, -, *, /)
-
-    - 🥦 Second number
-
-3. 🧠 The program:
-
-    - Matches the operator
-
-    - Performs the calculation
-
-    - Blocks division by zero like a bouncer at a club 🚫🕺
-
-4. 🔁 User decides whether to:
-
-    - Keep calculating 🎮
-
-    - Exit peacefully 🕊️
-
-
-## 🛡️ Error Handling & Safety 🚨
-
-- 🚫 Division by zero is fully blocked
-
-- ‼️ Invalid operators are caught and handled gracefully
-
-- 😌 No crashes, no stack traces, just vibes
-
-
-## 🧩 Key Python Concepts Used 🐍
-
-- match / case 🎯
-
-- while True loops 🔁
-
-- Functions for clean structure 🧱
-
-- Conditional logic 🧠
-
-- threading.Timer for delayed execution ⏱️
-
-
-## ▶️ How to Run ▶️💻
-
-Make sure you’re running Python 3.10+ (match-case needs it 😌).
-
-```
-python calculator.py
-
+```python
+timer = threading.Timer(3, scholarship_eligibility_checker)
+timer.start()
 ```
 
-- Wait 2 seconds ⏳…
+A little dramatic entrance never hurt anybody. 😭🎬
 
-- Then boom 💥 math mode activated 🧮🔥
+---
 
-🔥
+### **2. 👤 User Enters Applicant Information**
 
+The program asks the user for:
 
-## 🌱 Future Upgrades (Because We Dream Big) 🌈
+* 👤 Full name
+* 🎂 Age
+* 🎓 GPA out of 4.0
+* 💰 Annual family income
 
-- Possible improvements:
+The inputs are converted into the appropriate data types:
 
-    - 🔢 Input validation for non-numbers
+```python
+age = int(input("What is your age: "))
 
-    - ➗➕➖➗ More operators (%, power, etc.)
+gpa = float(input("Enter your GPA (out of 4.0): "))
 
-    - 🖼️ GUI version (Tkinter loading 👀)
+income = float(input("Enter your annual family income (R): "))
+```
 
-    - 🗂️ Calculation history
+This allows Python to perform numerical comparisons with the information.
 
-## 🏁 Final Thoughts 🏆✨
+---
 
-This project isn’t about fancy math — it’s about writing code that doesn’t break when humans touch it 😭💀.
+### **3. 🧠 Python Checks Eligibility**
 
-- Simple idea ✅
+The program uses conditional logic to determine which scholarship category the applicant qualifies for.
 
-- Strong fundamentals 💪
+### 🚫 Age Requirement
 
-- Safe logic 🛡️
+If the applicant is younger than 16 or older than 30:
 
-- Fun execution 🎮
+```python
+if age < 16 or age > 30:
+```
 
-### Day 4 = COMPLETED ✅🔥
+The applicant is considered ineligible based on the age requirement.
 
-Onwards and upwards, Python warrior 🐍🚀
+---
+
+### 🏆 Full Scholarship
+
+If the applicant meets the following requirements:
+
+* Age is within the allowed range
+* GPA is at least `3.8`
+* Family income is below `R500,000`
+
+Python checks:
+
+```python
+elif gpa >= 3.8 and income < 500000:
+```
+
+The applicant qualifies for the **Full Scholarship**.
+
+---
+
+### 🥈 Partial Scholarship
+
+If the applicant does not qualify for the full scholarship but has:
+
+* GPA of at least `3.4`
+* Family income below `R600,000`
+
+Python checks:
+
+```python
+elif gpa >= 3.4 and income < 600000:
+```
+
+The applicant qualifies for the **Partial Scholarship**.
+
+---
+
+### ❌ No Scholarship
+
+If none of the previous conditions are satisfied:
+
+```python
+else:
+```
+
+The program informs the applicant that they do not currently meet the scholarship criteria.
+
+---
+
+## **🔁 Repeating the Program**
+
+After checking an applicant, the program asks:
+
+```text
+🕹️ Wanna check again? (yes/no):
+```
+
+The `.lower()` method converts the answer to lowercase:
+
+```python
+runAgain = input(...).lower()
+```
+
+This means inputs such as:
+
+```text
+YES
+Yes
+yes
+```
+
+can all be treated as:
+
+```text
+yes
+```
+
+If the user enters anything other than `"yes"`, the loop stops.
+
+```python
+if runAgain != "yes":
+    break
+```
+
+---
+
+## **🧩 Key Python Concepts Used 🐍**
+
+| Concept           | What I Used It For                                  |
+| ----------------- | --------------------------------------------------- |
+| `if`              | Checking the first eligibility condition            |
+| `elif`            | Checking alternative scholarship conditions         |
+| `else`            | Handling applicants who don't meet the requirements |
+| `and`             | Requiring multiple conditions to be true            |
+| `or`              | Allowing either age condition to trigger            |
+| `>=`              | Checking minimum GPA requirements                   |
+| `<`               | Checking income and age limits                      |
+| `!=`              | Checking whether the user wants to continue         |
+| `while True`      | Repeating the eligibility checker                   |
+| `break`           | Exiting the loop                                    |
+| `input()`         | Collecting applicant information                    |
+| `int()`           | Converting age into an integer                      |
+| `float()`         | Converting GPA and income into decimals             |
+| `.lower()`        | Normalizing user input                              |
+| Functions         | Keeping the eligibility logic organized             |
+| `threading.Timer` | Delaying program execution                          |
+
+---
+
+## **🛡️ Eligibility Logic**
+
+The decision-making structure of the program is:
+
+```text
+                    👤 Applicant
+                         │
+                         ▼
+                  Is age 16–30?
+                    /       \
+                  ❌         ✅
+                  │          │
+              Not eligible   ▼
+                       Is GPA ≥ 3.8
+                       AND income < R500k?
+                         /       \
+                       ✅         ❌
+                       │           │
+                🏆 Full           ▼
+                             Is GPA ≥ 3.4
+                             AND income < R600k?
+                               /       \
+                             ✅         ❌
+                             │           │
+                       🥈 Partial       ❌ No Scholarship
+```
+
+This was my first real project where I used **multiple conditions together to make decisions**. 🧠🔥
+
+---
+
+## **▶️ How to Run 💻**
+
+Make sure Python is installed.
+
+Run the program from the terminal:
+
+```bash
+python scholarship_eligibility_checker.py
+```
+
+The program will display the welcome message, wait 3 seconds, and then start the scholarship eligibility checker. ⏳🎓
+
+---
+
+## **🌱 Future Upgrades**
+
+There are a few things I could improve as my Python skills grow:
+
+* 🛡️ Add error handling for invalid age, GPA, and income inputs
+* 📊 Add more scholarship categories
+* 📋 Display a formatted eligibility summary
+* 💾 Save applicant results to a file
+* 📈 Track how many applicants qualify for each scholarship
+* 🧪 Add tests for different eligibility scenarios
+* 🗃️ Store applicant information using data structures
+* 🖥️ Eventually build a GUI version
+
+---
+
+## **🏁 Final Thoughts 🏆**
+
+This project helped me understand one of the most important ideas in programming:
+
+> **Programs can make decisions based on conditions. 🧠**
+
+Instead of simply running every instruction from top to bottom, Python can evaluate information and choose what should happen next.
+
+I practiced using:
+
+* `if` ✅
+* `elif` ✅
+* `else` ✅
+* `and` ✅
+* `or` ✅
+* Comparison operators ✅
+* Loops 🔁
+* Functions 🧱
+* User input ⌨️
+
+The project started as a simple eligibility checker, but it gave me a proper introduction to **decision-making in Python**.
+
+### **Day 4 = COMPLETED ✅🔥**
+
+🐍 **4 Days Down. 96 To Go.**
+
+**Onwards, Python warrior 🚀**
